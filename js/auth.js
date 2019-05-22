@@ -1,14 +1,16 @@
-/* var config = {
-  apiKey: "AIzaSyDaP4D0lWgKisdEw_WY2JAO5trGawecbsU",
-  authDomain: "space-inventory.firebaseapp.com",
-  databaseURL: "https://space-inventory.firebaseio.com",
-  projectId: "space-inventory",
-  storageBucket: "space-inventory.appspot.com",
-  messagingSenderId: "820626166355"
+const config = {
+  apiKey: "AIzaSyCf3QOVUqQghyHedrSSL1hdYtafM6lmnVA",
+  authDomain: "schedule-360.firebaseapp.com",
+  databaseURL: "https://schedule-360.firebaseio.com",
+  projectId: "schedule-360",
+  storageBucket: "schedule-360.appspot.com",
+  messagingSenderId: "904075021749",
+  appId: "1:904075021749:web:512ad30b5be77f08"
 };
-firebase.initializeApp(config); */
 
-//var auth = firebase.auth();
+firebase.initializeApp(config);
+
+var auth = firebase.auth();
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
   if (firebaseUser) {
@@ -35,6 +37,7 @@ function signIn(email, password) {
       // Handle Errors here.
       var errorCode = error.code;
       var errorMessage = error.message;
+      console.log(errorMessage);
       // ...
     });
 }
